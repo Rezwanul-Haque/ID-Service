@@ -25,12 +25,12 @@ Rename the .env.example file to .env
    outside of the Realtime Location Service. All request must have a secret header.
    
    **Payload** 
-        
+```        
         {
             "name": "example",
             "domain": "example.com"
         }
-    
+``` 
 2. **POST** /api/v1/user/signup
    
    **Description:** Endpoint to register users for the companies.
@@ -46,7 +46,7 @@ Rename the .env.example file to .env
         }
 ```
     **Response** 
-    ```
+```
         {
             "id": 13,
             "company_id": 7,
@@ -55,7 +55,7 @@ Rename the .env.example file to .env
             "created_at": "2020-03-19 06:08:56",
             "updated_at": "2020-03-19 06:08:56"
         }
-    ```
+```
 
 3. **GET** /api/v1/user/resolve
    
