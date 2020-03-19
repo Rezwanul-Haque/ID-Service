@@ -86,4 +86,4 @@ Rename the .env.example file to .env
 
 ## Release Notes:
 #### 1.0.2: 
-Improved error response
+> #### ID-Service converted to Golang
