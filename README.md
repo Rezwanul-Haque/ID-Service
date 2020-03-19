@@ -45,7 +45,7 @@ Rename the .env.example file to .env
             "userId": "test2"
         }
 ```
-    **Response** 
+**Response:**
 ```
         {
             "id": 13,
@@ -85,7 +85,5 @@ Rename the .env.example file to .env
 ```
 
 ## Release Notes:
-#### 1.0.1: 
+#### 1.0.2: 
 Improved error response
-#### 1.0.0: 
-Released first production version
