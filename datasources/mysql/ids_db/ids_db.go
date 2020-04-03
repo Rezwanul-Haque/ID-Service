@@ -3,33 +3,20 @@ package ids_db
 import (
 	"database/sql"
 	"fmt"
-	"log"
-	"os"
+	"github.com/rezwanul-haque/ID-Service/logger"
+	"github.com/rezwanul-haque/ID-Service/utils/helpers"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/joho/godotenv"
 )
-
-func goDotEnvVariable(key string) string {
-
-	// load .env file
-	err := godotenv.Load(".env")
-
-	if err != nil {
-		log.Fatalf("Error loading .env file")
-	}
-
-	return os.Getenv(key)
-}
 
 var (
 	Client *sql.DB
 
-	username = goDotEnvVariable("MYSQL_IDS_USERNAME")
-	password = goDotEnvVariable("MYSQL_IDS_PASSWORD")
-	host     = goDotEnvVariable("MYSQL_IDS_HOST")
-	port     = goDotEnvVariable("MYSQL_IDS_PORT")
-	schema   = goDotEnvVariable("MYSQL_IDS_SCHEMA")
+	username = helpers.GoDotEnvVariable("MYSQL_IDS_USERNAME")
+	password = helpers.GoDotEnvVariable("MYSQL_IDS_PASSWORD")
+	host     = helpers.GoDotEnvVariable("MYSQL_IDS_HOST")
+	port     = helpers.GoDotEnvVariable("MYSQL_IDS_PORT")
+	schema   = helpers.GoDotEnvVariable("MYSQL_IDS_SCHEMA")
 )
 
 func init() {
@@ -39,11 +26,12 @@ func init() {
 	var err error
 	Client, err = sql.Open("mysql", dataSourceName)
 	if err != nil {
+		logger.Error("connecting to database failed: ", err)
 		panic(err)
 	}
 
 	if err = Client.Ping(); err != nil {
 		panic(err)
 	}
-	log.Println("database successfully configured")
+	logger.Info("database successfully configured")
 }
