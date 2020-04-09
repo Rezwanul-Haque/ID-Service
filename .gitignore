@@ -121,6 +121,6 @@ fabric.properties
 !.vscode/extensions.json
 
 ### .env ###
-.env
+src/.env
 
 # End of https://www.gitignore.io/api/go,intellij

@@ -3,8 +3,8 @@ package ids_db
 import (
 	"database/sql"
 	"fmt"
-	"github.com/rezwanul-haque/ID-Service/logger"
-	"github.com/rezwanul-haque/ID-Service/utils/helpers"
+	"github.com/rezwanul-haque/ID-Service/src/logger"
+	"github.com/rezwanul-haque/ID-Service/src/utils/helpers"
 
 	_ "github.com/go-sql-driver/mysql"
 )

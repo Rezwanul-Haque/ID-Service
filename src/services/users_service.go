@@ -1,9 +1,9 @@
 package services
 
 import (
-	"github.com/rezwanul-haque/ID-Service/domain/users"
-	"github.com/rezwanul-haque/ID-Service/utils/date"
-	"github.com/rezwanul-haque/ID-Service/utils/errors"
+	"github.com/rezwanul-haque/ID-Service/src/domain/users"
+	"github.com/rezwanul-haque/ID-Service/src/utils/date"
+	"github.com/rezwanul-haque/ID-Service/src/utils/errors"
 )
 
 var (

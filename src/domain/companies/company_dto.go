@@ -3,8 +3,8 @@ package companies
 import (
 	"strings"
 
-	"github.com/rezwanul-haque/ID-Service/domain/users"
-	"github.com/rezwanul-haque/ID-Service/utils/errors"
+	"github.com/rezwanul-haque/ID-Service/src/domain/users"
+	"github.com/rezwanul-haque/ID-Service/src/utils/errors"
 )
 
 type Company struct {

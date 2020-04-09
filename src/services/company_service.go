@@ -2,12 +2,12 @@ package services
 
 import (
 	guuid "github.com/google/uuid"
-	"github.com/rezwanul-haque/ID-Service/domain/companies"
-	"github.com/rezwanul-haque/ID-Service/domain/users"
-	"github.com/rezwanul-haque/ID-Service/utils/consts"
-	"github.com/rezwanul-haque/ID-Service/utils/date"
-	"github.com/rezwanul-haque/ID-Service/utils/errors"
-	"github.com/rezwanul-haque/ID-Service/utils/hash"
+	"github.com/rezwanul-haque/ID-Service/src/domain/companies"
+	"github.com/rezwanul-haque/ID-Service/src/domain/users"
+	"github.com/rezwanul-haque/ID-Service/src/utils/consts"
+	"github.com/rezwanul-haque/ID-Service/src/utils/date"
+	"github.com/rezwanul-haque/ID-Service/src/utils/errors"
+	"github.com/rezwanul-haque/ID-Service/src/utils/hash"
 )
 
 var (

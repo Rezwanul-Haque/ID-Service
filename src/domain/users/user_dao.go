@@ -3,9 +3,9 @@ package users
 import (
 	"fmt"
 
-	"github.com/rezwanul-haque/ID-Service/datasources/mysql/ids_db"
-	"github.com/rezwanul-haque/ID-Service/logger"
-	"github.com/rezwanul-haque/ID-Service/utils/errors"
+	"github.com/rezwanul-haque/ID-Service/src/datasources/mysql/ids_db"
+	"github.com/rezwanul-haque/ID-Service/src/logger"
+	"github.com/rezwanul-haque/ID-Service/src/utils/errors"
 )
 
 const (

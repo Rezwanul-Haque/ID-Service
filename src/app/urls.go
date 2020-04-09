@@ -1,9 +1,9 @@
 package app
 
 import (
-	"github.com/rezwanul-haque/ID-Service/controllers/company"
-	"github.com/rezwanul-haque/ID-Service/controllers/ping"
-	"github.com/rezwanul-haque/ID-Service/controllers/users"
+	"github.com/rezwanul-haque/ID-Service/src/controllers/company"
+	"github.com/rezwanul-haque/ID-Service/src/controllers/ping"
+	"github.com/rezwanul-haque/ID-Service/src/controllers/users"
 )
 
 const (

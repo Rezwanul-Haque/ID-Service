@@ -2,7 +2,7 @@ package app
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/rezwanul-haque/ID-Service/logger"
+	"github.com/rezwanul-haque/ID-Service/src/logger"
 )
 
 var (

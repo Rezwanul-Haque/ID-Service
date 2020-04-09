@@ -5,11 +5,11 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/rezwanul-haque/ID-Service/domain/users"
-	"github.com/rezwanul-haque/ID-Service/services"
-	"github.com/rezwanul-haque/ID-Service/utils/consts"
-	"github.com/rezwanul-haque/ID-Service/utils/errors"
-	"github.com/rezwanul-haque/ID-Service/utils/helpers"
+	"github.com/rezwanul-haque/ID-Service/src/domain/users"
+	"github.com/rezwanul-haque/ID-Service/src/services"
+	"github.com/rezwanul-haque/ID-Service/src/utils/consts"
+	"github.com/rezwanul-haque/ID-Service/src/utils/errors"
+	"github.com/rezwanul-haque/ID-Service/src/utils/helpers"
 )
 
 func Create(c *gin.Context) {
