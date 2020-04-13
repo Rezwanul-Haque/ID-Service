@@ -1,0 +1,22 @@
+version: '3.3'
+
+services:
+  mysql:
+    image: mysql:latest
+    volumes:
+      - "./db_data:/var/lib/mysql"
+    env_file:
+      - ".env"
+    ports:
+      - "3307:3306"
+
+  id_service:
+    container_name: id_service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rezwanulhaque/id-service:latest
+    ports:
+      - "7001:7001"
+    depends_on:
+      - mysql

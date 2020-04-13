@@ -123,4 +123,7 @@ fabric.properties
 ### .env ###
 .env
 
+### DB ###
+db_data
+
 # End of https://www.gitignore.io/api/go,intellij
