@@ -1,4 +1,4 @@
-module github.com/rezwanul-haque/ID-Service
+module github.com/rezwanul-haque/ID-Service/src
 
 go 1.14
 
