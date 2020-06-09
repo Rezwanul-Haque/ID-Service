@@ -2,6 +2,7 @@ version: '3.3'
 
 services:
   mysql:
+    container_name: mysql
     build:
       context: ./docker/mysql
     volumes:
@@ -9,10 +10,8 @@ services:
     env_file:
       - ".env"
     ports:
-      - "3307:3306"
+      - "3306:3306"
     tty: true
-    networks:
-      - appmysql
 
   id_service:
     container_name: id_service
@@ -21,11 +20,8 @@ services:
       dockerfile: ./docker/go/Dockerfile
     ports:
       - "7001:7001"
+    env_file:
+      - ".env"
     tty: true
     depends_on:
       - mysql
-    networks:
-      - appmysql
-networks:
-  appmysql:
-    driver: bridge

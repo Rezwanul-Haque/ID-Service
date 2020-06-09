@@ -15,7 +15,7 @@ func IsInvalid(value string) bool {
 
 func GoDotEnvVariable(key string) string {
 	// load .env file
-	err := godotenv.Load(".env")
+	err := godotenv.Load("$GOPATH/src/github.com/rezwanul-haque/ID-Service/.env")
 
 	if err != nil {
 		log.Fatalf("Error loading .env file")

@@ -1,4 +1,4 @@
-CREATE DATABASE ids_db;
+CREATE DATABASE IF NOT EXISTS ids_db;
 
 USE ids_db;
 
@@ -28,3 +28,7 @@ CREATE TABLE `user` (
                                KEY `idx_user_company_id` (`company_id`),
                                CONSTRAINT `fk_user_company_id` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB CHARSET=utf8;
+
+CREATE USER 'root'@'%' IDENTIFIED BY '12345678';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
