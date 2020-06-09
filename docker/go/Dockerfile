@@ -19,12 +19,17 @@ ENV GOPATH=/app
 # Set the current working directory inside the container
 ENV APP_PATH=$GOPATH/src/$REPO_URL
 ENV WORKPATH=$APP_PATH/src/
+
 COPY src $WORKPATH
+
 WORKDIR $WORKPATH
 
+RUN pwd
+RUN ls
+
 # Copy go mod and sum files
-#COPY go.mod .
-#COPY go.sum .
+COPY ./src/go.mod .
+COPY ./src/go.sum .
 
 # Download all dependencies. Dependencies will be cached if the go.mod and the go.sum files are not changed
 RUN go mod download
@@ -34,12 +39,12 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o id-service .
 
 # Start a new stage from scratch
 #FROM alpine:latest
-#
+
 #RUN ls bin/
 ## Copy the Pre-built binary file from the previous stage. Observe we also copied the .env file
 #COPY --from=builder /app/id-service .
 #COPY --from=builder /app/.env .
-#
+
 # Expose port 7001 to the outside world
 EXPOSE 7001
 
