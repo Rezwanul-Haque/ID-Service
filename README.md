@@ -3,6 +3,20 @@ Manages authentication and authorization. For authentication this application us
 simple approach. So it is the users responsibility not to insert any invalid user in the 
 database.
 
+# Run the app
+```
+./run.sh
+```
+## If connection refused error occur on id_service container then
+> This error occur because mysql need some time to initialize but go request to connect 
+> before mysql connection stabilize 
+```
+docker-compose down
+# then
+docker-compose up -d mysql
+docker-compose up -d id_service
+``` 
+
 ## How it works?
 For a user get authenticated the system must know the user first. There are two types of 
 users: *admin* and regular *user*. An admin cannot be created by a user sign-up process.

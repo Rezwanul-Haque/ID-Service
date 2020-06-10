@@ -11,7 +11,7 @@ import (
 const (
 	queryInsertUser                 = "INSERT INTO user(company_id, user_id, app_key, role, created_at, updated_at) VALUES(?, ?, ?, ?, ?, ?);"
 	queryGetUser                    = "SELECT user_id, app_key, company_id, role FROM user WHERE app_key=?;"
-	queryGetUsersbyCompanyIdAndRole = "SELECT id, user_id, app_key, company_id, role, created_at, updated_at FROM user WHERE company_id=? AND role=?;"
+	queryGetUsersByCompanyIdAndRole = "SELECT id, user_id, app_key, company_id, role, created_at, updated_at FROM user WHERE company_id=? AND role=?;"
 )
 
 func (user *User) Get() *errors.RestErr {
@@ -55,7 +55,7 @@ func (user *User) Save() *errors.RestErr {
 }
 
 func (user *User) GetUsersByComapnyIdAndRole(companyId int64, role string) ([]User, *errors.RestErr) {
-	stmt, err := ids_db.Client.Prepare(queryGetUsersbyCompanyIdAndRole)
+	stmt, err := ids_db.Client.Prepare(queryGetUsersByCompanyIdAndRole)
 	if err != nil {
 		logger.Error("error when trying to prepare get users by companyId and role statement", err)
 		return nil, errors.NewInternalServerError("database error")

@@ -9,6 +9,7 @@ LABEL maintainer="Rezwanul Haque <rezwanul.cse@gmail.com>"
 # Install git.
 # Git is required for fetching the dependencies.
 RUN apk update && apk add --no-cache git
+RUN apk update && apk add --no-cache bash
 
 # Configure the repo url
 ENV REPO_URL=github.com/Rezwanul-Haque/ID-Service
@@ -33,6 +34,10 @@ RUN go mod download
 
 # Build the Go app
 RUN CGO_ENABLED=0 GOOS=linux go build -o id-service .
+
+##
+#RUN git clone https://github.com/vishnubob/wait-for-it.git
+#CMD ./wait-for-it/wait-for-it.sh --host=mysql --port=3306 --timeout=60 -- ./id-service
 
 # Expose port 7001 to the outside world
 EXPOSE 7001
