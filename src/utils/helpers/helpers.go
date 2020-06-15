@@ -2,7 +2,7 @@ package helpers
 
 import (
 	"github.com/joho/godotenv"
-	"github.com/rezwanul-haque/rls-Deployer/ID-Service/src/logger"
+	"github.com/rezwanul-haque/ID-Service/src/logger"
 	"log"
 	"os"
 )

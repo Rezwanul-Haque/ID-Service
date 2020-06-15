@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/rezwanul-haque/rls-Deployer/ID-Service/src/utils/helpers"
+	"github.com/rezwanul-haque/ID-Service/src/utils/helpers"
 
 	"github.com/rezwanul-haque/ID-Service/src/logger"
 )
