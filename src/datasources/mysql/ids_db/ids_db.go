@@ -4,19 +4,19 @@ import (
 	"database/sql"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/rezwanul-haque/rls-Deployer/ID-Service/src/utils/helpers"
 
 	"github.com/rezwanul-haque/ID-Service/src/logger"
-	"os"
 )
 
 var (
 	Client *sql.DB
 
-	username = os.Getenv("MYSQL_IDS_USERNAME")
-	password = os.Getenv("MYSQL_IDS_PASSWORD")
-	host     = os.Getenv("MYSQL_IDS_HOST")
-	port     = os.Getenv("MYSQL_IDS_PORT")
-	schema   = os.Getenv("MYSQL_IDS_SCHEMA")
+	username = helpers.GoDotEnvVariable("MYSQL_IDS_USERNAME")
+	password = helpers.GoDotEnvVariable("MYSQL_IDS_PASSWORD")
+	host     = helpers.GoDotEnvVariable("MYSQL_IDS_HOST")
+	port     = helpers.GoDotEnvVariable("MYSQL_IDS_PORT")
+	schema   = helpers.GoDotEnvVariable("MYSQL_IDS_SCHEMA")
 )
 
 func init() {
